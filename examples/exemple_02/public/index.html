@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Modern GitHub Dashboard - Visualize your GitHub profile data with beautiful analytics">
+  
+  <title>GitHub Insights Dashboard</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="/styles.css">
+  
+  <!-- Preload important resources -->
+  <link rel="preload" href="/app.js" as="script">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+</head>
+<body class="loading">
+  <!-- App Container -->
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="header-content">
+        <h1 class="logo">
+          <i class="fab fa-github-alt"></i>
+          <span>GitHub Insights</span>
+        </h1>
+        
+        <div class="header-actions">
+          <button id="theme-toggle" class="icon-button" aria-label="Toggle dark mode">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button id="refresh-btn" class="icon-button" aria-label="Refresh data">
+            <i class="fas fa-sync-alt"></i>
+          </button>
+          <span id="last-updated" class="last-updated"></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Loading State -->
+    <div id="loading" class="loading-overlay" aria-live="polite" aria-busy="true">
+      <div class="loading-content">
+        <div class="spinner">
+          <i class="fas fa-spinner fa-spin"></i>
+        </div>
+        <p>Loading your GitHub data...</p>
+        <div class="progress-bar">
+          <div class="progress"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Error Display -->
+    <div id="error" class="error-overlay" role="alert" hidden>
+      <div class="error-content">
+        <div class="error-icon">
+          <i class="fas fa-exclamation-triangle"></i>
+        </div>
+        <div class="error-details">
+          <h3>Error Loading Data</h3>
+          <p id="error-message"></p>
+          <button id="retry-btn" class="primary-button">
+            <i class="fas fa-sync-alt"></i> Try Again
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="dashboard-grid">
+      <!-- User Profile Card -->
+      <section id="user" class="card profile-card" aria-labelledby="profile-heading" hidden>
+        <div class="card-header">
+          <h2 id="profile-heading">
+            <i class="fas fa-user"></i> Profile
+          </h2>
+        </div>
+        <div class="card-body">
+          <!-- Dynamic content will be inserted here -->
+        </div>
+      </section>
+
+      <!-- Repositories Card -->
+      <section id="repos" class="card repos-card" aria-labelledby="repos-heading" hidden>
+        <div class="card-header">
+          <h2 id="repos-heading">
+            <i class="fas fa-book"></i> Repositories
+          </h2>
+          <div class="card-actions">
+            <button class="sort-button" data-sort="stars">
+              <i class="fas fa-star"></i> Sort by Stars
+            </button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="repos-grid">
+            <!-- Dynamic content will be inserted here -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Activity Card -->
+      <section id="activities" class="card activity-card" aria-labelledby="activity-heading" hidden>
+        <div class="card-header">
+          <h2 id="activity-heading">
+            <i class="fas fa-code-branch"></i> Recent Activity
+          </h2>
+        </div>
+        <div class="card-body">
+          <ul class="activity-timeline">
+            <!-- Dynamic content will be inserted here -->
+          </ul>
+        </div>
+      </section>
+
+      <!-- Languages Card -->
+      <section id="languages" class="card languages-card" aria-labelledby="languages-heading" hidden>
+        <div class="card-header">
+          <h2 id="languages-heading">
+            <i class="fas fa-code"></i> Languages
+          </h2>
+        </div>
+        <div class="card-body">
+          <div class="languages-chart">
+            <!-- Dynamic content will be inserted here -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Commits Card -->
+      <section id="commits" class="card commits-card" aria-labelledby="commits-heading" hidden>
+        <div class="card-header">
+          <h2 id="commits-heading">
+            <i class="fas fa-history"></i> Recent Commits
+          </h2>
+        </div>
+        <div class="card-body">
+          <div class="commits-list">
+            <!-- Dynamic content will be inserted here -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Contributions Card -->
+      <section id="contributions" class="card contributions-card" aria-labelledby="contributions-heading" hidden>
+        <div class="card-header">
+          <h2 id="contributions-heading">
+            <i class="fas fa-calendar-alt"></i> Contributions
+          </h2>
+          <div class="time-range">
+            <button class="time-button active" data-range="month">Month</button>
+            <button class="time-button" data-range="year">Year</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="contributions-chart">
+            <!-- Dynamic content will be inserted here -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <p>GitHub Insights Dashboard &copy; <span id="current-year"></span></p>
+      <p class="version">v1.0.0</p>
+    </footer>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="/app.js" type="module"></script>
+  
+  <!-- Inline script for critical initializations -->
+  <script>
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    
+    // Initialize theme from localStorage or prefer-color-scheme
+    const savedTheme = localStorage.getItem('theme') || 
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+</body>
+</html>

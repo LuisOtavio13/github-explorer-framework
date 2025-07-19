@@ -26,4 +26,4 @@ Thank you for considering contributing to GitHub Explorer!
 - Help review and test other contributions
 
 ## License
-MIT
+GPL

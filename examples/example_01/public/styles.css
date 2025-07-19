@@ -1,0 +1,306 @@
+/**
+ * GitHub Dashboard - Stylesheet
+ * 
+ * This CSS file contains all styles for the GitHub Dashboard application,
+ * providing a clean, responsive interface for viewing GitHub profile data.
+ */
+
+/* ======================
+   Base Styles
+   ====================== */
+
+/**
+ * Global body styles
+ * Sets up the foundation for typography and layout
+ */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #24292e; /* GitHub's primary text color */
+  background-color: #f6f8fa; /* GitHub's background color */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* ======================
+   Utility Components
+   ====================== */
+
+/**
+ * Loading indicator
+ * Shown during data fetching
+ */
+.loading-indicator {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #586069; /* GitHub's secondary text color */
+}
+
+/**
+ * Error message container
+ * Displayed when data loading fails
+ */
+.error-message {
+  background-color: #ffebee;
+  color: #d32f2f; /* Material Design error color */
+  padding: 1.5rem;
+  border-radius: 6px;
+  margin-bottom: 2rem;
+  border-left: 4px solid #d32f2f;
+}
+
+/* ======================
+   Layout Components
+   ====================== */
+
+/**
+ * Main dashboard container
+ * Uses CSS Grid for responsive layout
+ */
+.dashboard-container {
+  display: grid;
+  gap: 2rem;
+}
+
+/**
+ * Dashboard sections
+ * Consistent styling for all content blocks
+ */
+.dashboard-section {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e1e4e8; /* GitHub's border color */
+}
+
+/* ======================
+   Typography
+   ====================== */
+
+/**
+ * Section headings
+ * Consistent styling with GitHub-inspired colors
+ */
+.section-heading {
+  color: #24292e;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e1e4e8;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.25rem;
+}
+
+/* ======================
+   User Profile Section
+   ====================== */
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.user-profile img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #f6f8fa;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.user-profile h2 {
+  margin: 0 0 0.5rem 0;
+  color: #24292e;
+  font-size: 1.5rem;
+}
+
+.user-profile p {
+  margin: 0.5rem 0;
+  color: #586069;
+}
+
+.user-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.user-stat {
+  background: #f6f8fa;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ======================
+   Repository List
+   ====================== */
+
+.repo-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.repo-item {
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.repo-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.repo-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: #586069;
+}
+
+.repo-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* ======================
+   Activity List
+   ====================== */
+
+.activity-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+/* ======================
+   Language Statistics
+   ====================== */
+
+.language-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.language-item {
+  padding: 1rem 0;
+}
+
+.language-bar-container {
+  height: 10px;
+  background: #e1e4e8;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+  overflow: hidden;
+}
+
+.language-bar {
+  height: 100%;
+  background: #0366d6; /* GitHub's blue color */
+  border-radius: 5px;
+}
+
+/* ======================
+   Commit List
+   ====================== */
+
+.commit-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.commit-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.commit-count {
+  background: #0366d6;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+/* ======================
+   Contributions Chart
+   ====================== */
+
+.contributions-chart {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-end;
+  padding: 1rem 0;
+}
+
+.month-contrib {
+  text-align: center;
+  flex: 1;
+}
+
+.contrib-bar {
+  width: 100%;
+  max-width: 30px;
+  margin: 0 auto;
+  border-radius: 3px;
+  transition: height 0.3s ease;
+}
+
+.month-label {
+  font-size: 0.7rem;
+  color: #586069;
+  margin-top: 0.5rem;
+}
+
+/* ======================
+   Responsive Design
+   ====================== */
+
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  .user-profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .user-stats {
+    justify-content: center;
+  }
+
+  .dashboard-section {
+    padding: 1.5rem;
+  }
+}

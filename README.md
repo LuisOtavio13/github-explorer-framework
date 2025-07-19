@@ -140,4 +140,4 @@ A: All modern browsers (Chrome, Firefox, Edge, Safari).
 
 ## License
 
-MIT
+GPL

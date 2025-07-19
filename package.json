@@ -1,0 +1,30 @@
+{
+  "name": "github-api-framework",
+  "version": "1.0.0",
+  "description": "A modular framework for interacting with the GitHub API",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node examples/basic-usage.js",
+    "dev": "node examples/advanced-usage.js"
+  },
+  "keywords": [
+    "github",
+    "api",
+    "framework",
+    "wrapper"
+  ],
+  "author": "Seu Nome",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.7"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "prettier": "^3.2.4"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

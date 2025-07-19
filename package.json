@@ -2,20 +2,25 @@
   "name": "github-api-framework",
   "version": "1.0.0",
   "description": "A modular framework for interacting with the GitHub API",
-  "main": "src/index.js",
+  "main": "dist/github-api-helper.cjs.js",
+  "module": "dist/github-api-helper.esm.js",
+  "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
-    "build": "rollup -c --configPlugin terser",
-    "build:dev": "rollup -c --configPlugin terser --environment NODE_ENV:development",
-    "build:prod": "rollup -c --configPlugin terser --environment NODE_ENV:production",
-    "build:watch": "rollup -c --watch --configPlugin terser",
-    "build:analyze": "rollup -c --configPlugin terser --sourcemap"
+    "build": "rollup -c",
+    "build:dev": "rollup -c --environment NODE_ENV:development",
+    "build:prod": "rollup -c --environment NODE_ENV:production",
+    "build:watch": "rollup -c --watch",
+    "prepublishOnly": "npm run build",
+    "test": "jest"
   },
   "keywords": [
     "github",
     "api",
     "framework",
-    "wrapper"
+    "wrapper",
+    "rest-api",
+    "github-sdk"
   ],
   "author": "TylorSwift2",
   "license": "GPL-3.0-only",
@@ -28,24 +33,25 @@
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^28.0.6",
     "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-terser": "^0.4.4",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
+    "jest": "^29.7.0",
     "prettier": "^3.2.4",
     "rollup": "^4.9.1",
-    "rollup-plugin-terser": "^7.0.2"
+    "rollup-plugin-dts": "^6.1.0"
   },
   "engines": {
     "node": ">=16.0.0"
   },
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "exports": {
     ".": {
       "import": "./dist/github-api-helper.esm.js",
       "require": "./dist/github-api-helper.cjs.js",
-      "default": "./dist/github-api-helper.min.js"
+      "default": "./dist/github-api-helper.esm.js"
     },
     "./package.json": "./package.json"
   }

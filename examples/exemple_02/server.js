@@ -3,8 +3,7 @@
  * 
  * Provides API endpoints for GitHub data and serves the frontend
  */
-import dotenv from 'dotenv';
-dotenv.config();
+
 import express from 'express';
 import cors from 'cors';
 import path from 'path';
@@ -38,7 +37,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // GitHub API Configuration
 const githubConfig = {
   githubUsername: 'TylorSwift2',
-  githubToken: ' TOKEN'
+  githubToken: 'YOUR_TOKEN'
 };
 
 // API Endpoints

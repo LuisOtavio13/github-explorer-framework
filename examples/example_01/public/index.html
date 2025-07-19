@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="GitHub User Dashboard - Visualize GitHub profile data including repositories, activities, and contributions" />
+  
+  <!-- Page Title -->
+  <title>GitHub User Dashboard</title>
+  
+  <!-- Favicon (optional) -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <!-- Loading Indicator -->
+  <div id="loading" class="loading-indicator" aria-live="polite" aria-busy="true" style="display:none;">
+    <i class="fas fa-spinner fa-spin"></i> Loading GitHub data...
+  </div>
+  
+  <!-- Error Display -->
+  <div id="error" class="error-message" role="alert" style="display:none;"></div>
+
+  <!-- Main Content Sections -->
+  <main class="dashboard-container">
+    <!-- User Profile Section -->
+    <section id="user" class="user-profile" aria-labelledby="user-heading" style="display:none;">
+      <h2 id="user-heading" class="section-heading">User Profile</h2>
+      <!-- Content will be dynamically inserted by JavaScript -->
+    </section>
+
+    <!-- Repositories Section -->
+    <section class="dashboard-section" aria-labelledby="repos-heading">
+      <h3 id="repos-heading" class="section-heading">
+        <i class="fas fa-book"></i> Repositories
+      </h3>
+      <ul id="repos" class="repo-list" style="display:none;"></ul>
+    </section>
+
+    <!-- Activities Section -->
+    <section class="dashboard-section" aria-labelledby="activities-heading">
+      <h3 id="activities-heading" class="section-heading">
+        <i class="fas fa-code-branch"></i> Recent Activities
+      </h3>
+      <ul id="activities" class="activity-list" style="display:none;"></ul>
+    </section>
+
+    <!-- Languages Section -->
+    <section class="dashboard-section" aria-labelledby="languages-heading">
+      <h3 id="languages-heading" class="section-heading">
+        <i class="fas fa-code"></i> Languages
+      </h3>
+      <ul id="languages" class="language-list" style="display:none;"></ul>
+    </section>
+
+    <!-- Commits Section -->
+    <section class="dashboard-section" aria-labelledby="commits-heading">
+      <h3 id="commits-heading" class="section-heading">
+        <i class="fas fa-history"></i> Recent Commits
+      </h3>
+      <ul id="commits" class="commit-list" style="display:none;"></ul>
+    </section>
+
+    <!-- Contributions Section -->
+    <section class="dashboard-section" aria-labelledby="contributions-heading">
+      <h3 id="contributions-heading" class="section-heading">
+        <i class="fas fa-calendar-alt"></i> Contributions
+      </h3>
+      <div id="contributions" class="contributions-chart" style="display:none;"></div>
+    </section>
+  </main>
+
+  <!-- JavaScript -->
+  <script src="/app.js" type="module"></script>
+</body>
+</html>

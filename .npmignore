@@ -1,0 +1,38 @@
+# Código fonte original (já compilado está no dist/)
+src/
+
+# Testes e cobertura
+tests/
+__tests__/
+coverage/
+*.test.js
+*.spec.js
+
+# Configurações de build
+rollup.config.js
+.babelrc
+.eslintrc
+.prettierrc
+
+# Ambiente de desenvolvimento
+.env
+.env.*
+.npmrc
+
+# Documentação (exceto README principal)
+docs/
+examples/
+CONTRIBUTING.md
+CHANGELOG.md
+
+# IDEs e editores
+.idea/
+.vscode/
+*.code-workspace
+
+# Outros
+.editorconfig
+.gitignore
+*.log
+*.tmp
+*.patch

@@ -7,7 +7,7 @@ import {
   ContributionService
 } from '../src/index.js';
 
-const config = { githubUsername: 'octocat', githubToken: '' };
+const config = { githubUsername: 'octocat', };
 
 async function runAllServices() {
   // UserService

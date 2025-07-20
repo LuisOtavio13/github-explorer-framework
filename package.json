@@ -1,7 +1,7 @@
 {
-  "name": "github-api-framework",
+  "name": "@LuisOtavio13/github-explorer-framework",
   "version": "1.0.0",
-  "description": "A modular framework for interacting with the GitHub API",
+  "description": "Modular framework for interacting with the GitHub API",
   "main": "dist/github-api-helper.cjs.js",
   "module": "dist/github-api-helper.esm.js",
   "types": "dist/index.d.ts",
@@ -11,8 +11,8 @@
     "build:dev": "rollup -c --environment NODE_ENV:development",
     "build:prod": "rollup -c --environment NODE_ENV:production",
     "build:watch": "rollup -c --watch",
-    "prepublishOnly": "npm run build",
-    "test": "jest"
+    "test": "jest",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "github",
@@ -22,8 +22,12 @@
     "rest-api",
     "github-sdk"
   ],
-  "author": "TylorSwift2",
+  "author": "LuisOtavio13",
   "license": "GPL-3.0-only",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
+  },
   "dependencies": {
     "axios": "^1.6.7"
   },
@@ -54,5 +58,9 @@
       "default": "./dist/github-api-helper.esm.js"
     },
     "./package.json": "./package.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LuisOtavio13/github-explorer-framework.git"
   }
 }

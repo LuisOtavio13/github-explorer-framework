@@ -137,3 +137,6 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+.npmrc # npm configuration file
+# This file is used to configure npm settings, such as authentication tokens and registries.

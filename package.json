@@ -1,6 +1,6 @@
 {
   "name": "@LuisOtavio13/github-explorer-framework",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Modular framework for interacting with the GitHub API",
   "main": "dist/github-api-helper.cjs.js",
   "module": "dist/github-api-helper.esm.js",

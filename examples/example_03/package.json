@@ -1,0 +1,28 @@
+{
+  "name": "github-explorer-example-03",
+  "version": "1.0.0",
+  "description": "Exemplo TypeScript para GitHub Explorer Framework",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "dev": "ts-node src/main.ts",
+    "clean": "rm -rf dist node_modules",
+    "prepare": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "github-explorer-framework": "file:../..",
+    "axios": "^1.6.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.4",
+    "ts-node": "^10.9.2",
+    "@types/node": "^20.11.19",
+    "@types/axios": "^0.14.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

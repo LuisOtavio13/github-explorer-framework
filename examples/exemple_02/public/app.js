@@ -410,14 +410,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   function formatNumber(num) {
-  const safeNum = Number(num);
-  if (isNaN(safeNum)) {
-    console.warn('⚠️ [formatNumber] Valor inválido:', num);
-    return '0';
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
-  return safeNum.toLocaleString(); // formato automático com vírgulas
-}
-
 
   function formatDate(dateString) {
     const options = { day: 'numeric', month: 'short', year: 'numeric' };

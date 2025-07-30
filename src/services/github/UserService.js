@@ -14,7 +14,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 import axios from 'axios';
-import { getAuthHeaders } from '../utils/helpers.js';
+import { getAuthHeaders } from '../../utils/helpers.js';
 
 /**
  * Service class for handling GitHub user profile data

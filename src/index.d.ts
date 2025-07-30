@@ -33,11 +33,11 @@ import GitHubAPIHelper from './core/GitHubAPIHelper';
  * Individual services that handle specific GitHub data domains
  */
 import UserService from './services/UserService';        // Handles user profile data
-import RepoService from './services/RepoService';        // Manages repository data
-import ActivityService from './services/ActivityService'; // Processes user activities
-import LanguageService from './services/LanguageService'; // Analyzes language usage
-import CommitService from './services/CommitService';    // Tracks commit statistics
-import ContributionService from './services/ContributionService'; // Manages contribution data
+import RepoService from './services/github/RepoService';        // Manages repository data
+import ActivityService from './services/github/ActivityService'; // Processes user activities
+import LanguageService from './services/github/LanguageService'; // Analyzes language usage
+import CommitService from './services/github/CommitService';    // Tracks commit statistics
+import ContributionService from './services/github/ContributionService'; // Manages contribution data
 
 /**
  * Utility Modules

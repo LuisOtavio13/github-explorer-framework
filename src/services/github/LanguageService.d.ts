@@ -21,7 +21,7 @@
  * @class LanguageService
  */
 
-import { GitHubConfig, LanguageStats, Repository } from '../types';
+import { GitHubConfig, LanguageStats, Repository } from '../../types';
 
 declare class LanguageService {
   /**

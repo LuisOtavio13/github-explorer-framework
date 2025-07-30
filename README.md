@@ -1,7 +1,8 @@
 <!-- GitHub Framework - Unified Interface for Repository APIs -->
 <div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3500&pause=1200&color=7A3CE7&center=true&vCenter=true&width=500&lines=🌌+Github+Explorer+Framework+🌌!;🚀+Connect,+Visualize,+Explore;💻+JavaScript+%7C+TypeScript+%7C+API+Power;🧠+Made+for+Developers.+Built+to+Scale." alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&color=00FFF7&center=true&vCenter=true&width=435&lines=🌌+GitHub+Framework+🌌" alt="Typing SVG" />
 </div>
+
 
 
 <p align="center">

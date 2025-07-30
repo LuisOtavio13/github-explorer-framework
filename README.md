@@ -1,8 +1,9 @@
 <!-- GitHub Framework - Unified Interface for Repository APIs -->
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&pause=1000&color=00FFF7&center=true&vCenter=true&width=500&lines=🌌+GitHub+Framework+🌌" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=1000&color=00FFF7&center=true&vCenter=true&width=435&lines=🌌+GitHub+Framework+🌌" alt="Typing SVG" />
 </p>
+
 
 <p align="center">
   <em>One Interface. All Repositories. Infinite Possibilities.</em>

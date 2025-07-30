@@ -1,143 +1,168 @@
+<!-- GitHub Framework - Unified Interface for Repository APIs -->
+<div align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&color=00FFF7&center=true&vCenter=true&width=435&lines=🌌+GitHub+Framework+🌌" alt="Typing SVG" />
+</div>
 
-# GitHub Explorer
 
-GitHub Explorer is a modern web dashboard and Node.js API helper for exploring GitHub user profiles, repositories, activities, languages, commits, and contributions. It provides a beautiful UI and a modular API for developers.
 
----
+<p align="center">
+  <em>One Interface. All Repositories. Infinite Possibilities.</em>
+</p>
 
-## Table of Contents
-- [Features](#features)
-- [Architecture](#architecture)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Usage](#usage)
-- [Testing](#testing)
-- [Contributing](#contributing)
-- [FAQ](#faq)
-- [License](#license)
 
----
+<p align="center">
+  <a href="https://www.gnu.org/licenses/gpl-3.0" target="_blank">
+    <img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License">
+  </a>
+  <a href="./docs/document.html" target="_blank">
+    <img src="https://img.shields.io/badge/Documentation-Online-blue" alt="Docs">
+  </a>
+</p>
 
-## Features
-- View GitHub user profile, avatar, bio, followers, following, and repository count
-- Explore repository details: description, language, stars, forks, license, homepage
-- List and view commits, commit stats, and file diffs
-- Browse repository files and folders, view file content with syntax highlighting
-- Visualize language usage, commit stats, and monthly contributions with interactive charts
-- Copy file contents to clipboard
-- Responsive design with Bootstrap and custom styles
-- Modular API helper for Node.js scripts and automation
+<p align="center" style="color:#a0f0ff;font-size:1.1em;">
+  A futuristic framework that connects GitHub, GitLab, and more — all in one place.<br>
+  Seamlessly transform raw API calls into elegant, UI-ready visual data with TypeScript and full analytics.
+</p>
 
 ---
 
-## Architecture
-
-**Frontend:**
-- `index.html`: Main dashboard UI
-- `style.css`: Custom styles for dark mode and responsive layout
-- Uses Bootstrap, FontAwesome, Chart.js, Highlight.js
-
-**Backend/API Helper:**
-- `src/`: Main source code
-  - `core/GitHubAPIHelper.js`: Main class, orchestrates all services
-  - `services/`: Modular service classes for user, repo, activity, language, commit, and contribution data
-  - `utils/`: Helper functions and formatters
-
-**Examples & Tests:**
-- `examples/`: Example usage scripts for Node.js
-- `tests/`: Jest test files for all modules
-- `docs/`: Documentation files
+📘 <strong>Full Documentation:</strong>  
+🔗 [Read the full guide here](https://luisotavio13.github.io/github-framework-documentation/)
 
 ---
 
-## Installation
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/your-username/github-explorer.git
-   cd github-explorer
-   ```
-2. Install dependencies:
-   ```sh
-   npm install
-   ```
+## 📚 INDEX
+
+1️⃣ [Installation](#1-installation)  
+2️⃣ [Features](#2-features)  
+3️⃣ [Basic Usage](#3-basic-usage)  
+4️⃣ [Detailed Docs](#4-detailed-docs)  
+5️⃣ [Advanced Examples](#5-advanced-examples)  
+6️⃣ [Troubleshooting](#6-troubleshooting)  
+7️⃣ [Contributing](#7-contributing)  
+8️⃣ [Changelog](#8-changelog)  
+9️⃣ [License](#9-license)
 
 ---
 
-## Configuration
-Edit `config.json` with your GitHub username and (optionally) a personal access token:
+## 1️⃣ INSTALLATION
 
-```json
-{
-  "githubUsername": "octocat",
-  "githubToken": "your_github_token"
-}
+```bash
+npm install @luisotavio13/github-framework@1.0.0
 ```
 
-Tokens are optional for public data but recommended for higher rate limits and private repositories.
+---
+
+## 2️⃣ FEATURES
+
+✨ Unified APIs for GitHub, GitLab & more  
+✨ Full user and repository data  
+✨ Dynamic sorting for repositories  
+✨ Language usage graphs  
+✨ Contribution history & commit stats  
+✨ Ready-to-render UI components  
+✨ Strong TypeScript typing  
 
 ---
 
-## Usage
+## 3️⃣ BASIC USAGE
 
-### Web Dashboard
-1. Open `index.html` in your browser
-2. Explore your profile, repositories, activities, languages, commits, and contributions visually
+```javascript
+import GitHubAPIHelper from '@luisotavio13/github-framework';
 
-### Node.js Example
-See `examples/basic-usage.js`:
-```js
-import GitHubAPIHelper from '../src/index.js';
-const config = { githubUsername: 'octocat', githubToken: '' };
-const github = new GitHubAPIHelper(config);
-await github.loadAllData();
-console.log(github.renderProfile());
-console.log(github.renderRepos('stars'));
-console.log(github.renderActivities());
+const config = {
+  username: 'your-username',
+  token: 'your-token' // optional
+};
+
+const apiHelper = new GitHubAPIHelper(config);
+
+await apiHelper.loadAllData();
+
+console.log(apiHelper.userData);
+console.log(apiHelper.reposData);
+console.log(apiHelper.languagesData);
+
+const profile = apiHelper.renderProfile();
+const repos = apiHelper.renderRepos('stars');
+const charts = apiHelper.renderCharts();
 ```
 
-### API Reference
-See [`docs/API.md`](API.md) for full details on all classes and methods.
+---
+
+## 4️⃣ DETAILED DOCS
+
+Documentation lives in the [`/docs`](./docs) folder:
+
+- 📘 [API Reference](./docs/API.md)  
+- 📘 [GitLab Integration](./docs/gitlab.md)  
+- 📘 [TypeScript Models](./docs/ts-github-models.md)  
+- 📘 [Advanced Usage Guide](./docs/USAGE.md)  
+- 📘 [Troubleshooting](./docs/TROUBLESHOOTING.md)  
+- 📘 [Contributing](./docs/CONTRIBUTING.md)  
+- 📘 [Changelog](./docs/CHANGELOG.md)  
+- 📘 [Legal & Compliance](./docs/LEGAL.md)  
 
 ---
 
-## Testing
+## 5️⃣ ADVANCED EXAMPLES
 
-Run all tests with Jest:
-```sh
-npx jest
+📈 **Contribution Monitoring:**
+
+```javascript
+const monthlyContributions = apiHelper.contributionsData;
 ```
-Test files are located in the `tests/` folder and cover all main modules and services.
+
+🧪 **Top Used Languages:**
+
+```javascript
+const topLanguages = Object.entries(apiHelper.languagesData)
+  .sort((a, b) => b[1] - a[1])
+  .slice(0, 3);
+```
 
 ---
 
-## Contributing
+## 6️⃣ TROUBLESHOOTING
 
-Contributions are welcome! To contribute:
-1. Fork the repository
-2. Create a new branch
-3. Make your changes
-4. Submit a pull request
+See [TROUBLESHOOTING.md](./docs/TROUBLESHOOTING.md) for help with:
 
-Please write clear commit messages and add tests for new features.
-
----
-
-## FAQ
-
-**Q: Do I need a GitHub token?**
-A: No, but it is recommended for higher rate limits and private data.
-
-**Q: Can I use this as a library in my own Node.js scripts?**
-A: Yes! Import `GitHubAPIHelper` from `src/index.js` and use its methods.
-
-**Q: How do I customize the dashboard UI?**
-A: Edit `style.css` and `index.html` as needed. The code is modular and easy to extend.
-
-**Q: What browsers are supported?**
-A: All modern browsers (Chrome, Firefox, Edge, Safari).
+- 🔐 Authentication errors  
+- 🚫 API rate limit exceeded  
+- 🔒 Private repositories  
+- 🌐 Proxy configuration  
 
 ---
 
-## License
+## 7️⃣ CONTRIBUTING
 
-GPL
+We welcome contributions! Please read [CONTRIBUTING.md](./docs/CONTRIBUTING.md) for:
+
+- Git workflow  
+- Code standards  
+- Test automation  
+- Documentation guidelines  
+
+---
+
+## 8️⃣ CHANGELOG
+
+Track version history in:  
+📜 [CHANGELOG.md](./docs/CHANGELOG.md)
+
+---
+
+## 9️⃣ LICENSE
+
+Licensed under the **GNU GPL v3.0**.  
+Read the [LICENSE](./LICENSE) file.  
+For API legal info, see: [LEGAL.md](./docs/LEGAL.md)
+
+---
+
+## 📬 SUPPORT
+
+For issues, suggestions or bug reports:  
+📮 Open an issue or contact: ✉️ roberdoogarcia@gmail.com
+
+

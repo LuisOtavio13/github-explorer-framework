@@ -1,7 +1,8 @@
 <!-- GitHub Framework - Unified Interface for Repository APIs -->
 
 <h1 align="center" style="font-family:'Segoe UI',sans-serif;font-size:2.8em;color:#00fff7;animation: glow 1.5s ease-in-out infinite alternate;">
-  🌌 GitHub Framework 🌌<br>
+  ![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&pause=1000&color=00FFF7&center=true&vCenter=true&width=500&lines=🌌+GitHub+Framework+🌌)
+<br>
   <small style="font-size:0.5em;color:#aaaaaa;">One Interface. All Repositories. Infinite Possibilities.</small>
 </h1>
 
@@ -160,15 +161,4 @@ For API legal info, see: [LEGAL.md](./docs/LEGAL.md)
 For issues, suggestions or bug reports:  
 📮 Open an issue or contact: ✉️ roberdoogarcia@gmail.com
 
----
 
-<style>
-@keyframes glow {
-  from {
-    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff;
-  }
-  to {
-    text-shadow: 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff;
-  }
-}
-</style>

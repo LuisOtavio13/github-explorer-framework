@@ -1,10 +1,13 @@
 <!-- GitHub Framework - Unified Interface for Repository APIs -->
 
-<h1 align="center" style="font-family:'Segoe UI',sans-serif;font-size:2.8em;color:#00fff7;animation: glow 1.5s ease-in-out infinite alternate;">
-  ![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&pause=1000&color=00FFF7&center=true&vCenter=true&width=500&lines=🌌+GitHub+Framework+🌌)
-<br>
-  <small style="font-size:0.5em;color:#aaaaaa;">One Interface. All Repositories. Infinite Possibilities.</small>
-</h1>
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&pause=1000&color=00FFF7&center=true&vCenter=true&width=500&lines=🌌+GitHub+Framework+🌌" alt="Typing SVG" />
+</p>
+
+<p align="center">
+  <em>One Interface. All Repositories. Infinite Possibilities.</em>
+</p>
+
 
 <p align="center">
   <a href="https://www.gnu.org/licenses/gpl-3.0" target="_blank">
